@@ -1,0 +1,6 @@
+[submodule "RNovA_PathSearcher_Inference"]
+	path = RNovA_PathSearcher_Inference
+	url = https://github.com/zqq66/RNovA_PathSearcher_Inference.git
+[submodule "RNovA_SeqFiller_Inference"]
+	path = RNovA_SeqFiller_Inference
+	url = https://github.com/zqq66/RNovA_SeqFiller_Inference.git
