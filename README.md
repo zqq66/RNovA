@@ -23,8 +23,23 @@ Module-specific dependencies are listed in each module's `requirements.uv`. In a
 - `numpy`, `pandas`, `numba`, `tqdm`, `requests`
 
 Notes:
-- `workflow.py --use-unimod` uses `requests` to fetch UniMod data.
+- `workflow.py --use-unimod` enables UniMod annotation and uses `requests` to fetch UniMod data.
 - `FDR-stage2.py` imports `RNovA_SeqFiller_Inference.utils.BasicClass`, so SeqFiller must be installed/built (see its README for `python setup.py build_ext --inplace`).
+- Checkpoint: https://zenodo.org/records/18352464
+
+## Clone With Submodules
+
+This repository uses git submodules for the two inference modules. Clone with submodules so the folders are populated:
+
+```bash
+git clone --recurse-submodules https://github.com/zqq66/RNovA.git
+```
+
+If you already cloned without submodules:
+
+```bash
+git submodule update --init --recursive
+```
 
 ## Quick Start (End-to-End)
 
@@ -34,8 +49,14 @@ Notes:
 
 Arguments:
 - `in_dir`: directory containing input `.mgf` files.
-- `useunimod`: `true` or `false` (controls UniMod annotation in `workflow.py`).
+- `useunimod`: `true` to pass `--use-unimod` to `workflow.py` (enables UniMod annotation); `false` skips UniMod annotation.
 - `k`: number of PTMs to keep in the top-k list.
+
+Example:
+
+```bash
+./RNovA.sh ./data true 10
+```
 
 `RNovA.sh` runs:
 1) decoy MGF generation
