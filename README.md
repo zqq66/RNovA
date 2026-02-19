@@ -19,7 +19,7 @@ For module-specific details, see:
 
 Module-specific dependencies are listed in each module's `requirements.uv`. In addition, the top-level workflow scripts require:
 
-- Python 3.10+
+- Python 3.11+
 - `numpy`, `pandas`, `numba`, `tqdm`, `requests`
 
 Notes:
