@@ -1,3 +1,6 @@
+If you use this repository in your research, please cite our paper: 
+
+Zero-shot de novo peptide sequencing with open posttranslational modification discovery https://www.nature.com/articles/s41587-026-03116-1
 # RNovA End-to-End Workflow
 
 This repository bundles the RNovA PathSearcher and SeqFiller inference modules plus post-processing (FDR and clustering) to run an open-PTM *de novo* workflow. The top-level entry point is `RNovA.sh`.
